@@ -30,10 +30,52 @@ $ python3 send_notification.py
 
 ### Run with Docker
 
-Install [Docker](https://docs.docker.com/get-started/), prepare enviroments in `.env` (as described above) and run command:
+### Launch
+
+- Install [Docker](https://docs.docker.com/get-started/)
+- Set enviroments in `.env` (as described above)
+- Run command to run Docker container based on initial image:
+
 ```sh
 $ docker run -d --rm --env-file ./.env  yulya6a/dvmn_bot:latest 
 
+```
+
+### Development with Docker
+
+If you changed some code, you need to rebuild image and run a new container with following steps:
+- Install [Docker](https://docs.docker.com/get-started/)
+- Build a new image with command:
+
+
+  - You should run command from project directory!
+  - Put your DockerHub username instead of `yulya6a`.
+  - Set your image name instead of `devman_bot` if you want.
+
+```sh
+$ docker build -t yulya6a/devman_bot .
+```
+
+- Stop the older version of container if there is one:
+  - Put your container ID instead of `happy_moore`. You can find it in `docker ps` output.
+   
+```sh
+$ docker ps
+$ docker rm -f happy_moore
+```
+
+- Run a new container:
+  - Set your image name and username instead of `yulya6a/dvmn_bot` if you have changed it.
+
+```sh
+$ docker run -d --rm --env-file ./.env  yulya6a/devman_bot 
+```
+
+- Push an image to DockerHub:
+  - Set your image name and username instead of `yulya6a/dvmn_bot` if you have changed it.
+ 
+```sh
+$ docker push yulya6a/devman_bot
 ```
 
 ## Project Goals
