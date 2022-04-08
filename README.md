@@ -7,11 +7,11 @@ The bot uses [Devman API](https://dvmn.org/api/docs/) and [python-telegram-bot](
 ## Enviroments
 
 The script uses enviroment file with Devman and Telegram authorization data. The file '.env' in root directory must include following data:
-- DVMN_API_TOKEN, individual token of Devman API
-- TELEGRAM_BOT_TOKEN, Telegram bot token
-- TELEGRAM_USER_ID, an ID of a Telegram user who get the notification
-- TELEGRAM_USER_NAME, a name of a Telegram user who get the notification
-- TELEGRAM_ADMIN_ID, an ID of bot administrator in Telegram to send logging notifications
+- `DVMN_API_TOKEN`, individual token of Devman API
+- `TELEGRAM_BOT_TOKEN`, Telegram bot token
+- `TELEGRAM_USER_ID`, an ID of a Telegram user who get the notification
+- `TELEGRAM_USER_NAME`, a name of a Telegram user who get the notification
+- `TELEGRAM_ADMIN_ID`, an ID of bot administrator in Telegram to send logging notifications
 
 ## How to launch
 
